@@ -6,6 +6,6 @@ def main():
         print(f.read())
 
     print()
-    print(f.read())
+    # print(f.read()) // with open() is going to open and close the file automatically
 
 main()
