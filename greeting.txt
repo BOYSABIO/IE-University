@@ -1,2 +1,1 @@
-Welcome to Python
-See you soon!
+Hello again
