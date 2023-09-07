@@ -1,0 +1,11 @@
+def main():
+    with open("greeting.txt", "w") as f:
+        f.write("Hello again")
+
+    with open("greeting.txt", "r") as f:
+        print(f.read())
+
+    print()
+    print(f.read())
+
+main()
