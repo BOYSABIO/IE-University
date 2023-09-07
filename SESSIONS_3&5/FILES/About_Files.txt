@@ -1,0 +1,3 @@
+About files
+- File is a collection of lines
+- Every line finishes with \n 
