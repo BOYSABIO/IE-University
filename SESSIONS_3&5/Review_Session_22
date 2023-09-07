@@ -2,7 +2,7 @@ def main():
     count = 1
 
     while True:
-        userID, password = input("Please enter your userID and Password seperated by comma: ").split(", ")
+        userID, password = input("Please enter your userID and Password seperated by comma: ").split(",")
         print(userID)
         print(password)
 
