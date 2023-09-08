@@ -9,7 +9,8 @@ def main():
         line += 1
         word = file_lines.count(" ") + 1 + word
         char = len(file_lines) + char - 1
-    
+    char += 1
+
     print("Your file has", line, "lines.")
     print("Your file has", word, "words.")
     print("Your file has", char, "characters.")
