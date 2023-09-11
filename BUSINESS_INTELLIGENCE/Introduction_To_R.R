@@ -14,6 +14,6 @@ print(sum(u))
 # install.packages("caret")
 library(caret)
  
-data = read.csv(Users/SLO/Downloads/Customer-churn.csv)
+str()
 
 str(data)
