@@ -22,10 +22,39 @@ print(dictionary)
 dictionary.pop("office") # Remove
 print(dictionary)
 
-print(dictionary.popitem()) # Take it use it and then remove it
+print(dictionary.popitem()) # Take it use it and then remove it (If no item is indicated it takes the last one)
 
 del dictionary["email"]
 print(dictionary)
 
 dictionary.clear()
 print(dictionary)
+
+a = {
+    1:"A",
+    2:"B",
+    3:"C"
+}
+
+print(a)
+b = a #Copying dictionaries by reference
+
+b.pop(2)
+
+# They will be the same as they are coppied by reference
+print(b)
+print(a)
+
+#Copy by values
+a = {
+    1:"A",
+    2:"B",
+    3:"C"
+}
+
+b = dict(a)
+
+b.pop(2)
+
+print(a)
+print(b)
