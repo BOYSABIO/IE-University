@@ -30,6 +30,8 @@ print(dictionary)
 dictionary.clear()
 print(dictionary)
 
+
+# Copying dictionaries by reference
 a = {
     1:"A",
     2:"B",
@@ -37,7 +39,7 @@ a = {
 }
 
 print(a)
-b = a #Copying dictionaries by reference
+b = a 
 
 b.pop(2)
 
