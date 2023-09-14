@@ -1,0 +1,8 @@
+import turtle
+
+# Create Screen
+sc = turtle.Screen()
+sc.title("Pong Game")
+sc.bgcolor("black")
+sc.setup(width=1000, height=600)
+
