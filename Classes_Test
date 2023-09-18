@@ -1,0 +1,24 @@
+class Test:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Test("John", 21)
+
+print(p1.name)
+print(p1.age)
+
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+make = input("Enter the make: ")
+model = input("Enter the model: ")
+year = input("Enter the year: ")
+
+car1 = Car(make, model, year)
+
+print("Your car is ", "make: ", car1.make, "model: ", car1.model, "year: ", car1.year)
