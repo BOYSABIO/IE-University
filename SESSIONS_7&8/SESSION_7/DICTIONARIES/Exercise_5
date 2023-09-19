@@ -1,3 +1,4 @@
+# Turning a dictionary into a list of tuples and assigning names to the items in the tuple and using them
 course = {
     "Mathematics":6,
     "Physics":4,

@@ -5,5 +5,5 @@ currencies = {
 }
 
 currency = input("Please enter a currency: ")
-print(currencies.get(currency.title(), "Currency is missing."))
+print(currencies.get(currency.title(), "Currency is missing.")) # Converts string to a title input
 
