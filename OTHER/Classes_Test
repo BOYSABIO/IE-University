@@ -24,3 +24,14 @@ year = input("Enter the year: ")
 car1 = Car(make, model, year)
 
 print("Your car is ", "make: ", car1.make, "model: ", car1.model, "year: ", car1.year)
+
+
+
+class Definition:
+    def __init__(self, name, define, notes):
+        self.name = name
+        self.define = define
+        self.notes = notes
+
+crisis = Definition("Crisis", "Issue or opportunity depending on who is handling it.", "Oher notes")
+print(crisis.name, "\n", crisis.define, "\n", crisis.notes)
