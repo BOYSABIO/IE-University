@@ -11,9 +11,9 @@ print(mean(u))
 print(median(u))
 print(sum(u))
 
-# install.packages("caret")
+install.packages("caret")
 library(caret)
  
-str()
+str(data)
 
 str(data)
