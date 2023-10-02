@@ -36,4 +36,3 @@ print([name for (name, grade) in grades.items() if grade >= 5])
 print({word:len(word) for word in ["I", "Love", "Programming"]})
 
 print({name:grade + 1 for (name, grade) in grades.items() if grade >= 5})
-print(grades)
