@@ -35,3 +35,33 @@ class Definition:
 
 crisis = Definition("Crisis", "Issue or opportunity depending on who is handling it.", "Oher notes")
 print(crisis.name, "\n", crisis.define, "\n", crisis.notes)
+
+
+test = Definition("Test definition", "This is a test definition", "Some notes on the test definiton")
+print(test.name, "\n", test.define, "\n", test.notes)
+
+
+#newTerm = input("Term: ")
+#newDefinition = input("Define: ")
+#newNote = input("Note: ")
+
+class term:
+    def __init__(self, term, definition, note):
+        self.term = term
+        self.definition = definition
+        self.note = note
+
+newTerm = input("Term: ")
+newDefinition = input("Define: ")
+newNote = input("Note: ")
+
+object = term(newTerm, newDefinition, newNote)
+print(object.term, "\n", object.definition, "\n", object.note)
+
+dictionary = {
+    "Term":object.term,
+    "Definition":object.definition,
+    "Note":object.note
+}
+
+print(dictionary)
