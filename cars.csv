@@ -1,0 +1,8 @@
+model_id,maker,model,category,price,stock_count
+10010,Audi,Q7,SUV,,3
+20020,BMW,5-Series,sedan,60000,6
+30030,Kia,Ceed,hatchback,25000,2
+40040,Honda,CR-V,SUV,35000,14
+50050,Ford,Kuga,SUV,30000,12
+60060,Kia,Rio,sedan,20000,13
+70070,Toyota,Yaris,hatchback,30000,

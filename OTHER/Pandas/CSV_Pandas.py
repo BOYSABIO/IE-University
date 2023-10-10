@@ -23,4 +23,3 @@ pd.options.display.max_rows = 9999
 
 print(df)
 
-print(pd.options.display.max_info_columns)
