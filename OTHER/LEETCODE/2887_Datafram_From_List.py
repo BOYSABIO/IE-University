@@ -41,4 +41,3 @@ student_id_list = []
     #new_student_age = int(input("Please enter student age: "))
 
 
-print(df.size(student_data))

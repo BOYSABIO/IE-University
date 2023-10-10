@@ -20,14 +20,14 @@ lm = train(medv~., data = train, method = 'lm')
 print(lm)
 print(lm$finalModel)
 lmPred = predict(lm, newdata = test)
-postResample(lmPred, test$medv) # Measure accuracy in prediction
+print(postResample(lmPred, test$medv)) # Measure accuracy in prediction
 
 
 # Regression KNN (Everytime you use knn you MUST use preProcess)
 knnFit = train(medv~., data = train, method = 'knn', preProcess = c("center", "scale"), tuneGrid = expand.grid(k = seq(1, 30, by = 5)))
-knnFit
+print(knnFit)
 knnPred = predict(knnFit, test)
-postResample(knnPred, test$medv)
+print(postResample(knnPred, test$medv))
 
 
 # Regression Tree
