@@ -43,7 +43,7 @@ print("TUNED KNN REGRESSION MODEL:")
 print(knnFit)
 
 knnPred = predict(knnFit, test)
-print("PREDICTION (RMSE):")
+print("KNN PREDICTION (RMSE):")
 print(postResample(knnPred, test$medv))
 
 
@@ -53,7 +53,7 @@ print("TUNED REGRESSION TREE:")
 print(regtree)
 
 regtreePred = predict(regtree, test)
-print("PREDICTION:")
+print("REGRESSION TREE PREDICTION:")
 print(postResample(regtreePred, test$medv))
 
 btree = train(medv~., data = train, method = 'bstTree')
@@ -67,3 +67,4 @@ btreePred = predict(btree_tune, test)
 print("BOOSTED TREE PREDICTION (RMSE):")
 print(postResample(regtreePred, test$medv))
 
+print("Best model could be KNN Regression with the lowest RMSE value")
