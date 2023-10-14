@@ -31,5 +31,5 @@ die2.roll()
 print("The result between 1 and 6 is:", die2.getValue())
 print()
 
-die1.setValue(3)
+die1.setValue(3) #You must set the value to a number in order to get the value 
 print(die1.getValue())

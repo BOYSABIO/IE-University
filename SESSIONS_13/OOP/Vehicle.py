@@ -39,9 +39,9 @@ class Airplane(Vehicle):
 
     def flying(self):
         print()
-        self.move(True)
+        self.move(True) # Using the method from the parent class
         print("Flying in the sky")
-        self.stop(True)
+        self.stop(True) # Using the method from the parent class
         print()
 
 airplane_1 = Airplane('F14', 2, 2)
