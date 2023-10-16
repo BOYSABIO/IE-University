@@ -23,7 +23,7 @@ bank_identifier = 0
 sort_code = 0
 account_number = 0
 
-iban = input("Please enter Iban: ")
+iban = input("Please enter Iban (Do not include spaces): ")
 
 if len(iban) == required_length:
     print('Country code:', iban[:2])
@@ -33,4 +33,6 @@ if len(iban) == required_length:
     print('Account number:', iban[14:22])
 else:
     print("Your Iban is the incorrect length")
+
+# GB 12 ABCD 890111 11167800
 
