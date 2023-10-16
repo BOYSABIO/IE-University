@@ -8,7 +8,7 @@ def grades(dictionary):
             final_report.update({subject.capitalize():'Fail'})
         else:
             final_report.update({subject.capitalize():'Pass'})
-    return final_report
+    return final_report 
 
 
 dictionary = {
