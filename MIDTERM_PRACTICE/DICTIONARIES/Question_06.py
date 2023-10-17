@@ -37,4 +37,4 @@ while check != 'no':
     dictionary.update({input("Please enter item to add: ").capitalize():input("Please enter information for added item: ").capitalize()})
     print(dictionary)
     
-    check = input("Type 'no' to quit: ")
+    check = input("Type 'no' to quit or enter to add another item: ")

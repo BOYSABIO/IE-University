@@ -22,6 +22,6 @@ for i in range(1000):
         numbers_list.append(new_number)
         break
 
-print(numbers_list)
-print(total)
-print(count)
+print('List:\n', numbers_list)
+print('Numbers added together: ', total)
+print('Total attempts:', count)
