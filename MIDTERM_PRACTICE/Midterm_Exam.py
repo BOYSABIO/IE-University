@@ -1,7 +1,7 @@
 def finder(list, tin, month):
     count = 0
     for i in list:
-        if i.get('month') == month & i.get('nif') == tin:
+        if i.get('month') == month & i.get('nif') == tin: #This wasnt working 
             count +=1
     
     dictionary = {month:count}
@@ -21,4 +21,4 @@ invoices = [{'nif': 'B12345678',
 tin = input("Please enter the tin you would like to check: ")
 month = input("Please enter the month you would like to check: ")
 
-finder(invoices, tin, month)
+print(finder(invoices, tin, month))

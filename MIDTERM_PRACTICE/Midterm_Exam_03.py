@@ -9,9 +9,6 @@ apartments = [{'year': 2000,
                 'garage': True, 
                 'zone': 'B'}, {'year': 1980, 'meters': 120, 'rooms': 4, 'garage': False, 'zone': 'A'}, {'year': 2005, 'meters': 75, 'rooms': 3, 'garage': True, 'zone': 'B'}, {'year': 2015, 'meters': 90, 'rooms': 2, 'garage': False, 'zone': 'A'}]
 
-print(apartments[1])
-print(int(True))
-
 
 # input = list of properties and a price
 # Output = another list wiht properties price <= input
@@ -34,9 +31,10 @@ for property in apartments:
     if property.get('Price') <= input:
         less_than_price.append(property)
 
-print(less_than_price)
+
 
 
 # There must be an error in the formula as it only outputs negative numbers 
+print("Properties less than the price you indicated:\n", less_than_price)
 print("Property price list: \n", list)
 print(apartments)
