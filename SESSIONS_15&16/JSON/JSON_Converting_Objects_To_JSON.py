@@ -43,3 +43,19 @@ data = {
 jsonData = json.dumps(data, indent=4)
 
 print(jsonData)
+
+
+
+import json
+
+data = [
+    [1,2,3,4],
+    ["hello" , "world" , "python"]
+]
+
+jsonData = json.dumps(data, indent=4)
+
+print(jsonData)
+
+
+
