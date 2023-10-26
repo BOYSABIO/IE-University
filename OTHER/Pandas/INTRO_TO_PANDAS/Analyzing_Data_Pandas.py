@@ -8,3 +8,5 @@ print(df.tail(3))
 
 #Information about the dataset
 print(df.info())
+
+print(df.shape)

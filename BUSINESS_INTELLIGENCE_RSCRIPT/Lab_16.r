@@ -59,7 +59,7 @@ ggplot(lift, values = 60) #If you want to predict 60%
 data("BostonHousing")
 data2 = BostonHousing
 
-index = createDataPartition(data$medv, p = 0.7, list = F)
+index = createDataPartition(data2$medv, p = 0.7, list = F)
 train2 = data2[index,]
 test2 = data2[-index,]
 
@@ -69,7 +69,7 @@ knnFit = train(medv~., data = train2, method = "knn", preProcess = c("center", "
 knnFit
 
 btree = train(medv~., data = train2, method = "bstTree", tuneGrid = expand.grid(nu = 0.1, maxdepth = c(1:5), mstop = 50), # nolint
-        trControl = trainControl(method = "cv", number = 10)) #Only adding train control # nolint
+        trControl = trainControl(method = "cv", number = 10)) #Only adding train control 
 print(btree)
 
 pred_knn = predict(knnFit, test2)
@@ -78,3 +78,4 @@ pred_btree = predict(btree, test2)
 postResample(pred_knn, test2$medv)
 postResample(pred_btree, test2$medv)
 
+# Put 16 and 17 in the same document 
