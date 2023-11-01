@@ -10,3 +10,12 @@ print()
 df = pd.DataFrame(getstockdata.history("10y"))
 print(df.info())
 print(df.describe())
+
+print("Currency")
+print(getstockdata.fast_info.currency)
+
+
+print(df.loc[df.Dividends > 0.0])
+print()
+
+print(df.loc[df.High > 1900])

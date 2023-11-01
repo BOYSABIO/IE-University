@@ -38,3 +38,8 @@ for i in range(1, len(dataF)):
 dataF["signal"] = signal
 print(dataF)
 print(dataF.signal.value_counts())
+
+print()
+print(dataF.loc[dataF.signal == 1])
+print()
+print(dataF.loc[dataF.signal == 2])

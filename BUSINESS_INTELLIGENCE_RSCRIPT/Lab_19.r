@@ -17,18 +17,26 @@ fviz_nbclust(data_scale, kmeans, method = "wss") #Use data and Kmeans, choose me
 fviz_nbclust(data_scale, kmeans, method = "silhouette") #Also silhouette method
 
 km = kmeans(data_scale, centers = 2, nstart = 25) #Center is number of clusters, nstart is number of times it will run
-km
+print("KM: ")
+print(km)
 
 kme = pam(data_scale, k = 2, nstart = 25)
-kme
+print("KME: ")
+print(kme)
 
 # VIZ
-fviz_cluster(km, data = data_scale, choose.vars = c("Murder", "UrbanPop"))
-fviz_cluster(kme, data = data_scale, choose.vars = c("Murder", "UrbanPop"))
+print("KM VIZ: ")
+print(fviz_cluster(km, data = data_scale, choose.vars = c("Murder", "UrbanPop")))
+
+print("KME VIZ: ")
+print(fviz_cluster(kme, data = data_scale, choose.vars = c("Murder", "UrbanPop")))
 
 km = kmeans(data_scale, centers = 4, nstart = 25) #Four Clusters
-km
-fviz_cluster(km, data = data_scale, choose.vars = c("Murder", "UrbanPop"))
+print("KM FOUR CLUSTERS:")
+print(km)
+
+print("KM VIZ FOUR CLUSTERS")
+print(fviz_cluster(km, data = data_scale, choose.vars = c("Murder", "UrbanPop")))
 
 # HIERARCHICAL CLUSERING
 # Bottom up approach
