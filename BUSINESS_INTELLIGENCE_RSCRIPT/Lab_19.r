@@ -23,7 +23,7 @@ print(km)
 kme = pam(data_scale, k = 2, nstart = 25)
 print("KME: ")
 print(kme)
-
+ 
 # VIZ
 print("KM VIZ: ")
 print(fviz_cluster(km, data = data_scale, choose.vars = c("Murder", "UrbanPop")))
