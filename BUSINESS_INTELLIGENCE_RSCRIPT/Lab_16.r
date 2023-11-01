@@ -67,6 +67,49 @@ print('Lift:')
 print(lift)
 
 
+# REPEAT PROCESS WITH ADA AND SVMLINEAR
+tree_ada_tune = train(diabetes~., data = train, method = "ada", 
+                tuneGrid = expand.grid(nu = 0.1, maxdepth = c(1:4), 
+                iter = c(50, 75, 100)), trControl = trainControl(method = "cv", 
+                number = 10, classProbs = TRUE, summaryFunction = twoClassSummary, 
+                savePredictions = TRUE))
+print("TUNE ADA 10 FOLD: ")
+print(tree_ada_tune)
+
+svm_tune = train(diabetes~., data = train, method = "svmLinear", 
+                tuneGrid = expand.grid(seq(0.1, 1, by = 0.1)), 
+                trControl = trainControl(method = "cv", number = 10,
+                classProbs = TRUE, summaryFunction = twoClassSummary, 
+                savePredictions = TRUE))
+print("TUNE SVMLINEAR 10 FOLD: ")
+print(svm_tune)
+
+# ADA AND SVM PREDICTIONS (CLASSES AND PROBABILITY)
+pred_ada_class = predict(tree_ada_tune, newdata = test)
+pred_ada_prob = predict(tree_ada_tune, newdata = test, type = "prob")
+
+pred_svm_class = predict(svm_tune, newdata = test)
+pred_svm_prob = predict(svm_tune, newdata = test, type = "prob")
+
+# ADA AND SVM CONFUSION MATRIX
+cm_ada = confusionMatrix(tree_ada_tune, test$diabetes, mode = "everything")
+print("Confusion Matrix (ada)")
+print(cm_ada)
+
+cm_svm = confusionMatrix(svm_tune, test$diabetes, mode = "everything")
+print("Confusion Matrix (svm)")
+print(cm_svm)
+
+# ROC CURVES
+pred_ada_prob$obs = test$diabetes
+Y = evalm(pred_ada_prob)
+
+pred_svm_prob$obs = test$diabetes
+z = evalm(pred_svm_prob)
+
+# LIFT CHART
+lift = lift(test$diabetes~pred_tree_prob$pos + pred_ada_prob$pos + pred_svm_prob$pos)
+ggplot(lift, values = 60)
 
 
 # REGRESSION
