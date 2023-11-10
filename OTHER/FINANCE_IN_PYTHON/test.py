@@ -4,6 +4,8 @@ import pandas as pd
 getstockdata = yf.Ticker(input("Enter symbol: "))
 print(getstockdata.history())
 print(getstockdata.fast_info)
+print()
+print(getstockdata.fast_info.year_change)
 print(getstockdata.major_holders)
 print()
 

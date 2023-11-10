@@ -2,7 +2,7 @@ import yfinance as yf
 import pandas as pd
 
 # Must be within the past 60 days
-dataF = yf.download("EURUSD=X", start = "2023-10-1", end = "2023-10-30", interval = "15m")
+dataF = yf.download("SPXS", start = "2023-10-1", end = "2023-10-30", interval = "15m")
 dataF.iloc[-1:,:]
 dataF.Open.iloc
 
@@ -17,11 +17,13 @@ def signal_generator(df):
     previous_close = df.Close.iloc[-2]
 
     # Bearish Pattern
-    if (open > close and previous_open < previous_close and close < previous_open and open >= previous_close):
+    if (open > close and previous_open < previous_close and 
+        close < previous_open and open >= previous_close):
         return 1
     
     # Bullish Pattern
-    elif (open < close and previous_open > previous_close and close > previous_open and open <= previous_close):
+    elif (open < close and previous_open > previous_close and 
+          close > previous_open and open <= previous_close):
         return 2
     
     # No clear pattern
