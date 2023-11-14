@@ -46,5 +46,18 @@ print()
 print(df["Survived"].value_counts(normalize = True) * 100)
 print()
 
+print("Groupby")
 print(df.groupby("Pclass")["Survived"].value_counts(normalize = True))
 print()
+
+print(df.dropna(subset = ["Age"]))
+print()
+
+df = df[df["Age"].notna()] #notna returns a df where all the values are replaced with boolean variable
+print(df)
+print()
+
+df["Young"] = df["Age"] <= 18
+print(df)
+print()
+print(df.groupby(["Pclass", "Young"])["Survived"].value_counts(normalize = True * 100))
