@@ -20,9 +20,12 @@ print(df)
 print(df.set_index("Month"))
 
 
-# Alternative Solution
+
+# Alternative Solution (Longer to compute)
 
 data = [["January", 30500, 22000], ["February", 35600, 23400], ["March", 28300, 18100], ["April", 33900, 20700]]
 
 accounting = pd.DataFrame(data, columns = ["Month", "Sales", "Expenses"])
+print(accounting)
+print()
 print(accounting.set_index("Month"))

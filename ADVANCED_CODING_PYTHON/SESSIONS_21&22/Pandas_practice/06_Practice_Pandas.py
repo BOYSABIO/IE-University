@@ -5,7 +5,6 @@ close of the stock exchange), Cash(capitalization at the close in thousands of e
 builds a DataFrame from a file with the above format and returns another DataFrame with the minimum,maximum and 
 average of each column."""
 
-import csv
 import pandas as pd
 
 def prices_summary(file):
@@ -15,3 +14,4 @@ def prices_summary(file):
 
 file = "CSV_FILES/prices.csv"
 print(prices_summary(file))
+

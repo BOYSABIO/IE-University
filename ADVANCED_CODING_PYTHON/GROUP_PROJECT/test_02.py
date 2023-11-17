@@ -146,3 +146,6 @@ def main():
         else:
             print("Invalid choice")
 main()
+
+# Fix invest feature
+# - Needs to end the game after 10 investments
