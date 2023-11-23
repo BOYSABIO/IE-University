@@ -27,7 +27,7 @@ class BankAccount:
 
     def borrow_money(self):
         borrow_amount = int(input("How much would you like to borrow? "))
-        self.interest_rate += 0.1
+        self.interest_rate += 0.01
         interest_amount = int(borrow_amount * self.interest_rate)
         self.debt += borrow_amount + interest_amount
         print(f"You borrowed {borrow_amount} with an interest rate of {self.interest_rate}")

@@ -64,6 +64,6 @@ print("Nitrogen Dioxide Summary at Plaza Eliptica: \n", summary(56, 8), '\n', se
 print("Nitrogen Dioxide Summary at Plaza Del Carmen: \n", summary(35, 8), '\n', sep = '')
 
 def monthly_average(pollutant, year):
-    return emissions[(emissions.MAGNITUDE == pollutant) & (emissions.YEAR == year)].groupby(["STATION", "MONTH"]).VALUE.mean()
+    return emissions[(emissions.MAGNITUDE == pollutant) & (emissions.YEAR == year)].groupby(["STATION", "MONTH"]).VALUE.mean().unstack('MONTH')
 
 print("Nitrogen Dioxide evolution in 2019: \n", monthly_average(8, 2019))
