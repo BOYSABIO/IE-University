@@ -8,10 +8,10 @@ def grade_stats(grades):
     return statistics
 
 grades = {
-    "Jeff":10,
-    "Steve":5,
-    "Mary":8,
-    "Malinda":3
+    "Math":10,
+    "Science":5,
+    "PE":8,
+    "English":3
 }
 
 print(grade_stats(grades))

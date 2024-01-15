@@ -1,0 +1,67 @@
+# Recap Class Datatype
+
+class Test:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Test("John", 21)
+
+print(p1.name)
+print(p1.age)
+
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+make = input("Enter the make: ")
+model = input("Enter the model: ")
+year = input("Enter the year: ")
+
+car1 = Car(make, model, year)
+
+print("Your car is ", "make: ", car1.make, "model: ", car1.model, "year: ", car1.year)
+
+
+
+class Definition:
+    def __init__(self, name, define, notes):
+        self.name = name
+        self.define = define
+        self.notes = notes
+
+crisis = Definition("Crisis", "Issue or opportunity depending on who is handling it.", "Oher notes")
+print(crisis.name, "\n", crisis.define, "\n", crisis.notes)
+
+
+test = Definition("Test definition", "This is a test definition", "Some notes on the test definiton")
+print(test.name, "\n", test.define, "\n", test.notes)
+
+
+#newTerm = input("Term: ")
+#newDefinition = input("Define: ")
+#newNote = input("Note: ")
+
+class term:
+    def __init__(self, term, definition, note):
+        self.term = term
+        self.definition = definition
+        self.note = note
+
+newTerm = input("Term: ")
+newDefinition = input("Define: ")
+newNote = input("Note: ")
+
+object = term(newTerm, newDefinition, newNote)
+print(object.term, "\n", object.definition, "\n", object.note)
+
+dictionary = {
+    "Term":object.term,
+    "Definition":object.definition,
+    "Note":object.note
+}
+
+print(dictionary)

@@ -1,4 +1,4 @@
-"""Write a program that asks the user for sales over a range of years and displays a linediagram showing the 
+"""Write a program that asks the user for sales over a range of years and displays a line diagram showing the 
 evolution of sales."""
 
 import matplotlib.pyplot as plt

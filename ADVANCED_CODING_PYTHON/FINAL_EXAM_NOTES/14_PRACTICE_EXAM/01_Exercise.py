@@ -20,7 +20,7 @@ df = pd.read_csv("CSV_FILES/cars1.csv", sep = ";", decimal = ",")
 print(df)
 
 # Delete the rows with unknown values and display the number of rows of the resulting Dataframe.
-df.dropna()
+df.dropna(inplace = True)
 print("The number of rows: ", df.shape[0])
 
 print(df.dtypes)

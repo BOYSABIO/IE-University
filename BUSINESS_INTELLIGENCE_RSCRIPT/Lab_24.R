@@ -9,7 +9,6 @@ library(SnowballC)
 library(wordcloud2)
 
 #data = search_tweets("Uber", n = 1000, include_rts = False, lang = "en")
-
 data = Uber[Uber$language == "en", ]
 
 # Preprocessing
