@@ -2,7 +2,7 @@ import yfinance as yf
 import pandas as pd
 
 # Must be within the past 60 days
-dataF = yf.download("MSFT", start = "2024-1-1", end = "2024-1-10", interval = "15m")
+dataF = yf.download("CRWD", start = "2024-1-1", end = "2024-1-10", interval = "15m")
 dataF.iloc[-1:,:]
 dataF.Open.iloc
 

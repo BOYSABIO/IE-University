@@ -1,11 +1,43 @@
 import math
 import pandas as pd
+import customtkinter
 
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("green")
+
+root = customtkinter.CTk()
+root.geometry("500x350")
+
+def login():
+    print("Test")
+
+frame = customtkinter.CTkFrame(master = root)
+frame.pack(pady = 20, padx = 60, fill = "both", expand = True)
+
+label = customtkinter.CTkLabel(master = frame, text = "Login System", font=("Aptos", 24))
+label.pack(pady = 12, padx = 10)
+
+entry1 = customtkinter.CTkEntry(master = frame, placeholder_text = "Username")
+entry1.pack(pady = 12, padx = 10)
+
+entry2 = customtkinter.CTkEntry(master = frame, placeholder_text = "Password", show = "*")
+entry2.pack(pady = 12, padx = 10)
+
+button = customtkinter.CTkButton(master = frame, text = "Login", command = login)
+button.pack(pady = 12, padx = 10)
+
+checkbox = customtkinter.CTkCheckBox(master = frame, text = "Remember Me")
+checkbox.pack(pady = 12, padx = 10)
+
+root.mainloop()
+
+
+income = int(input("Enter income: "))
 expense = int(input("Enter expense: "))
 
-income = 723 - expense
+net = income - expense
 allowance = 600
-total = income + allowance
+total = net + allowance
 
 grocery = (total * 0.075) * 4
 fast_food = (total * 0.075) * 4
@@ -15,6 +47,8 @@ remainder = round(((total - (grocery + fast_food + savings))), 2)
 
 stocks = round((remainder * 0.7), 2)
 bonds = round((remainder * 0.1), 2)
+Saving = (savings / 2)
+Roth_IRA = (savings / 2)
 fun = round((remainder - (stocks + bonds)), 2)
 
 
@@ -22,8 +56,8 @@ dict = {
     "Income":total,
     "Grocery":grocery,
     "Fast_Food":fast_food,
-    "Saving":(savings / 2),
-    "Roth_IRA":(savings / 2),
+    "Saving":Saving,
+    "Roth_IRA":Roth_IRA,
     "Remainder":remainder,
     "Stocks":stocks,
     "Bonds":bonds,
@@ -34,4 +68,18 @@ print(dict)
 print(pd.Series(dict))
 
 print()
-print(grocery / 4)
+print("Grocery amount per week: ", grocery / 4)
+print()
+
+ff_days = fast_food / 20
+print("Number of fast food deliveries under 20: ", ff_days)
+print("Every ", ff_days / 31, "days, you can order fast food")
+
+# print(grocery + fast_food + Saving + Roth_IRA + stocks + bonds + fun)
+# print(grocery / 31)
+# print(Saving + Roth_IRA + stocks + bonds)
+# print(income * 0.075)
+# print()
+
+
+
