@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Inline CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        /* HubL tokens for customization and CAN-SPAM compliance */
+        {% set subject = "Your HTML email is ready" %}
+        {% set preview_text = "Learn how to create an HTML email from scratch or using email builders" %}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{ subject }}</h1>
+        </div>
+        <div class="content">
+            <p>Hi {{ contact.firstname }},</p>
+            <p>Congratulations! You have successfully created an HTML email using Copilot. 🎉</p>
+            <p>HTML emails are a great way to communicate with your audience and showcase your brand. Whether you're a coding pro or a beginner, HTML emails can be part of a successful marketing program.</p>
+            <p>And hey, that's a lot more bananas than you'd expect! 🍌📧</p>
+            <p>Happy emailing,</p>
+            <p>Copilot</p>
+        </div>
+        <div class="footer">
+            <p>You received this email because you signed up for Copilot.</p>
+            <p>If you no longer wish to receive these emails, you can <a href="{{ unsubscribe_link }}">unsubscribe</a> at any time.</p>
+            <p>{{ site_settings.company_name }} | {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }} | {{ site_settings.company_city }}, {{ site_settings.company_state }} {{ site_settings.company_zip }}</p>
+        </div>
+    </div>
+</body>
+</html>
