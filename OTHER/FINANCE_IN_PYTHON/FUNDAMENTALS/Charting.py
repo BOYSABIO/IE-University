@@ -42,7 +42,7 @@ df = create_allocation()
 
 fig, ax = plt.subplots()
 myexplode = [0.2, 0, 0]
-df.value_counts().plot(kind = "pie", explode = myexplode)
+pd.value_counts(df).plot(kind = "pie", explode = myexplode)
 ax.set_title('Portfolio Allocation', loc = "left", fontdict = {'fontsize':14, 'fontweight':'bold', 'color':'tab:blue'})
 ax.set_ylabel('')
 
