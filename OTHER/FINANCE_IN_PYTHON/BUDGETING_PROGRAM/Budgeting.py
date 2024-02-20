@@ -125,7 +125,6 @@ def per_week(value):
 # Quick add for expenses (food / grocery / other)
 # def quick_add():
 
-3
 #money_check(grocery, fast_food)
 
 
