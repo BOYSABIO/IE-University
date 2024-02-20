@@ -64,7 +64,7 @@ while True:
         print("Grocery amount per week: ", round((grocery / 4),2))
         print()
         print("Number of fast food deliveries under 20: ", round(ff_days))
-        print("Every ", round(((ff_days / 31) * 7),3) , "days, you can order 20€ fast food")
+        print("Every ", round((31 / ff_days),3) , "days, you can order 20€ fast food")
 
     elif program == 2:
         print("test")
