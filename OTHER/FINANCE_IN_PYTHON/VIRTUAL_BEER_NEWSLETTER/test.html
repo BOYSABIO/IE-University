@@ -9,18 +9,19 @@
             padding: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 100%;
             margin: 0 auto;
         }
         .header {
             background-color: #000000;
-            background-image: url('/OTHER/FINANCE_IN_PYTHON/VIRTUAL_BEER_NEWSLETTER/IMAGES/img1.png.png');
+            /*background-image: url('/OTHER/FINANCE_IN_PYTHON/VIRTUAL_BEER_NEWSLETTER/IMAGES/img1.png.png');*/
+            background-image: url(https://wallpaperaccess.com/full/435928.jpg);
             background-position: center;
             background-size: cover;
             color: #f0f0f0;
-            padding: 40px;
+            padding: 100px;
             text-align: center;
-            font-size: medium;
+            font-size: larger;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .content {
@@ -34,28 +35,26 @@
             padding: 20px;
             text-align: center;
         }
-        /* HubL tokens for customization and CAN-SPAM compliance */
-        /*{% set subject = "Your HTML email is ready" %}
-        {% set preview_text = "Learn how to create an HTML email from scratch or using email builders" %}*/
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>.</h1>
+            <h1>VIRTUAL BEER</h1>
         </div>
         <div class="content">
-            <p>Hi {{ contact.firstname }},</p>
+            <p>Hi,</p>
             <p>Alright motherfuckers we need to get this back on.</p>
             <p>I know we are all probably busy or have some other shit but if we want this to work then make the time in your calendar and even if it's like 30min just join for a bit.</p>
             <p>And hey, that's a lot more bananas than you'd expect! 🍌📧</p>
+            <p>Add a join link here... <a href="Meeting Link"><font color = "red">Meeting Link</font></a></p>
             <p>...,</p>
             <p>VB</p>
         </div>
         <div class="footer">
             <p>You received this email because you are part of Virtual Beer.</p>
             <p>If you no longer wish to receive these emails, you can <a href="{{ unsubscribe_link }}">unsubscribe</a> at any time.</p>
-            <p>{{ site_settings.company_name }} | {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }} | {{ site_settings.company_city }}, {{ site_settings.company_state }} {{ site_settings.company_zip }}</p>
+            <p>VIRTUAL BEER | ONLINE </p>
         </div>
     </div>
 </body>
