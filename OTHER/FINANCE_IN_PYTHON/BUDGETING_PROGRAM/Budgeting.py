@@ -30,7 +30,7 @@ while True:
         ff_days = fast_food / 20
 
         # Initialize Subscribtions
-        capcut = 12
+        capcut = 12 #This would be mitigated if the amount in savings reached 5,400
         n26 = 14
         linq = 15
         # Splice
@@ -44,7 +44,7 @@ while True:
         bonds = round((remainder * 0.1), 2)
         Saving = (savings / 2)
         Roth_IRA = (savings / 2)
-        schwab = Saving + Roth_IRA + stocks + bonds
+        schwab = Roth_IRA + stocks + bonds
         fun = round((remainder - (stocks + bonds)), 2)
 
         # Create & Print Dictionary
@@ -54,7 +54,7 @@ while True:
         "Fast_Food":fast_food,
         "Total Food":total_food,
         "Subscriptions":subscriptions_total,
-        "Saving":Saving,
+        "N26 Saving":Saving,
         "Roth_IRA":Roth_IRA,
         "Remainder":remainder,
         "Stocks":stocks,
