@@ -29,6 +29,11 @@ while True:
         total_food = grocery + fast_food
         ff_days = fast_food / 20
 
+        now = datetime.datetime.now()
+        month = now.month
+        year = now.year
+        days_in_month = calendar.monthrange(year,month)[1]
+
         # Initialize Subscribtions
         capcut = 12 #This would be mitigated if the amount in savings reached 5,400
         n26 = 14
@@ -70,71 +75,95 @@ while True:
         print()
         print("Extra Points:")
         print("Grocery amount per week: ", round((grocery / 4),2))
+        print("Grocery amount per day: ", round((grocery / days_in_month),3))
         print()
-        print("Number of fast food deliveries under 20: ", round(ff_days))
-        print("Every ", round((31 / ff_days),3) , "days, you can order 20€ fast food")
+        print("Number of fast food deliveries under $20: ", round(ff_days))
+        print("Every ", round((days_in_month / ff_days),3) , "days, you can order 20€ fast food")
 
     elif program == 2:
         print("Starting Money Check...")
         print("---------------------------")
-        balance = int(input("Enter Balance: "))
+        check = input("Do you want to allocate savings / investments?: ")
+
+        if check == "yes":
+            # we include the savings and investments allocation
+            # also include numbers regarding the amount that has been spent already
+            # how well have you done such as expenses per day or amount remaining
+            income_at_start_of_month = int(input("Enter starting amount: "))
+            balance = int(input("Enter Balance: "))
+            money_spent = income_at_start_of_month - balance
     
-        # Initialize Basic Needs
-        grocery = (balance * 0.075) * 4
-        fast_food = (balance * 0.075) * 4
-        total_food = grocery + fast_food
-        ff_days = fast_food / 20
+            # Initialize Basic Needs
+            grocery = (balance * 0.075) * 4
+            fast_food = (balance * 0.075) * 4
+            total_food = grocery + fast_food
+            ff_days = fast_food / 20
 
-        # Calculate number of days remaining in month
-        now = datetime.datetime.now()
-        last_day = datetime.datetime(now.year, now.month + 1, 1) - datetime.timedelta(days = 1)
-        remaining_days = (last_day - now).days + 1
+            # Calculate number of days remaining in month
+            now = datetime.datetime.now()
+            last_day = datetime.datetime(now.year, now.month + 1, 1) - datetime.timedelta(days = 1)
+            remaining_days = (last_day - now).days + 1
 
-        # Initialize Subscribtions
-        subscriptions_total = "Paid"
+            # Initialize Subscribtions
+            subscriptions_total = "Paid"
 
-        # Initialize Finance Variables
-        savings = balance * 0.2
-        remainder = round(((balance - (total_food + savings))), 2)
+            # Initialize Finance Variables
+            savings = balance * 0.2
+            remainder = round(((balance - (total_food + savings))), 2)
 
-        stocks = round((remainder * 0.7), 2)
-        bonds = round((remainder * 0.1), 2)
-        Saving = (savings / 2)
-        Roth_IRA = (savings / 2)
-        schwab = Saving + Roth_IRA + stocks + bonds
-        fun = round((remainder - (stocks + bonds)), 2)
+            stocks = round((remainder * 0.7), 2)
+            bonds = round((remainder * 0.1), 2)
+            Saving = (savings / 2)
+            Roth_IRA = (savings / 2)
+            schwab = Saving + Roth_IRA + stocks + bonds
+            fun = round((remainder - (stocks + bonds)), 2)
 
-        # Create & Print Dictionary
-        dict = {
-        "Income":balance,
-        "Grocery":grocery,
-        "Fast_Food":fast_food,
-        "Total Food":total_food,
-        "Subscriptions":subscriptions_total,
-        "Saving":Saving,
-        "Roth_IRA":Roth_IRA,
-        "Remainder":remainder,
-        "Stocks":stocks,
-        "Bonds":bonds,
-        "Schwab Total":schwab,
-        "Fun":fun
-        }
+            # Create & Print Dictionary
+            dict = {
+            "Current Balance":balance,
+            "Money Spent":money_spent,
+            "Grocery":grocery,
+            "Fast_Food":fast_food,
+            "Total Food":total_food,
+            "Subscriptions":subscriptions_total,
+            "Saving":Saving,
+            "Roth_IRA":Roth_IRA,
+            "Remainder":remainder,
+            "Stocks":stocks,
+            "Bonds":bonds,
+            "Schwab Total":schwab,
+            "Fun":fun
+            }
 
-        print(dict)
-        s = pd.Series(dict)
-        print(s)
+            print(dict)
+            s = pd.Series(dict)
+            print(s)
 
-        print()
-        print("Extra Points:")
-        print("Grocery amount per week: ", round((grocery / 4),2))
-        print()
-        print("Number of fast food deliveries under 20: ", round(ff_days))
-        print("Every ", round((remaining_days / ff_days),3) , "days, you can order 20€ fast food")
+            print()
+            print("Extra Points:")
+            print("Grocery amount per week: ", round((grocery / 4),2))
+            print()
+            print("Number of fast food deliveries under 20: ", round(ff_days))
+            print("Every ", round((remaining_days / ff_days),3) , "days, you can order 20€ fast food")
+        else:
+            # Most importantly we need to have the program to use the starting amount from the month to extract the
+            #amount of money that has already been allocated to investments and savings so that the final result of
+            #spending amount isn't skewed because there is money spent from the start in savings & investments
+            # we only include the amount that goes towards groceries for the rest of the month
+            # also include numbers regarding the amount that has been spent already
+            # how well have you done such as expenses per day or amount remaining
+            income_at_start_of_month = int(input("Enter starting amount: "))
+            balance = int(input("Enter Balance: "))
+            money_spent = income_at_start_of_month - balance
 
     elif program == 3:
         print("Ending Program...")
         break
      
+
+
+
+
 
 
 
