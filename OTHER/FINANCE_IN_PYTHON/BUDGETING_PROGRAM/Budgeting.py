@@ -1,4 +1,5 @@
 import math
+from numpy import real
 import pandas as pd
 import calendar
 import datetime
@@ -6,7 +7,8 @@ import datetime
 while True:
     print("1 ---- General")
     print("2 ---- Money Check")
-    print("3 ---- Exit")
+    print("3 ---- Rebalancing")
+    print("4 ---- Exit")
     program = int(input("Please indicate: "))
     if program == 1:
         print("Starting General Program...")
@@ -22,6 +24,8 @@ while True:
             total = net + allowance
         else:
             total = net
+        
+        investment_style = input("Choose (safe) or (risky) investment style: ") #Choose conservative or risky style for rebalancing
     
         # Initialize Basic Needs
         grocery = (total * 0.075) * 4
@@ -42,14 +46,26 @@ while True:
         subscriptions_total = capcut
 
         # Initialize Finance Variables
+        # Still need to look into savings and how much should be allocated
         savings = total * 0.2
         remainder = round(((total - (total_food + subscriptions_total + savings))), 2)
-
-        stocks = round((remainder * 0.7), 2)
-        bonds = round((remainder * 0.1), 2)
+        fun = round((remainder * 0.2),2)
+        if investment_style == "safe":
+            stocks = round((remainder * 0.25), 2)
+            bonds = round((remainder * 0.40),2)
+            realestate = round((remainder * 0.1),2)
+            commodities = round((remainder * 0.1),2)
+            money_fund = round((remainder * 0.15))
+        else:
+            stocks = round((remainder * 0.4), 2)
+            bonds = round((remainder * 0.3), 2)
+            realestate = round((remainder * 0.1),2)
+            commodities = round((remainder * 0.15), 2)
+            money_fund = round((remainder * 0.05),2)
+        
         Saving = (savings / 2)
         Roth_IRA = (savings / 2)
-        schwab = Roth_IRA + stocks + bonds
+        schwab = Roth_IRA + stocks + bonds + realestate + commodities + money_fund
         fun = round((remainder - (stocks + bonds)), 2)
 
         # Create & Print Dictionary
@@ -64,6 +80,9 @@ while True:
         "Remainder":remainder,
         "Stocks":stocks,
         "Bonds":bonds,
+        "REITs":realestate,
+        "Commodities":commodities,
+        "Money Market Fund":money_fund,
         "Schwab Total":schwab,
         "Fun":fun
         }
@@ -157,6 +176,9 @@ while True:
             money_spent = income_at_start_of_month - balance
 
     elif program == 3:
+        print("Rebalancing Program...")
+
+    elif program == 4:
         print("Ending Program...")
         break
      
