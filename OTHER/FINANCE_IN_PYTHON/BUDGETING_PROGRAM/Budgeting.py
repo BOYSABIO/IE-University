@@ -50,23 +50,25 @@ while True:
         savings = total * 0.2
         remainder = round(((total - (total_food + subscriptions_total + savings))), 2)
         fun = round((remainder * 0.2),2)
+        allocation = remainder - fun
         if investment_style == "safe":
-            stocks = round((remainder * 0.25), 2)
-            bonds = round((remainder * 0.40),2)
-            realestate = round((remainder * 0.1),2)
-            commodities = round((remainder * 0.1),2)
-            money_fund = round((remainder * 0.15))
+            stocks = round((allocation * 0.25), 2)
+            bonds = round((allocation * 0.40),2)
+            realestate = round((allocation * 0.1),2)
+            commodities = round((allocation * 0.1),2)
+            money_fund = round((allocation * 0.15))
         else:
-            stocks = round((remainder * 0.4), 2)
-            bonds = round((remainder * 0.3), 2)
-            realestate = round((remainder * 0.1),2)
-            commodities = round((remainder * 0.15), 2)
-            money_fund = round((remainder * 0.05),2)
+            stocks = round((allocation * 0.4), 2)
+            bonds = round((allocation * 0.3), 2)
+            realestate = round((allocation * 0.1),2)
+            commodities = round((allocation * 0.15), 2)
+            money_fund = round((allocation * 0.05),2)
         
-        Saving = (savings / 2)
-        Roth_IRA = (savings / 2)
+        Saving = (savings / 3)
+        Roth_IRA = (savings / 3)
+        e_fund = (savings / 3)
         schwab = Roth_IRA + stocks + bonds + realestate + commodities + money_fund
-        fun = round((remainder - (stocks + bonds)), 2)
+        #fun = round((remainder - (stocks + bonds)), 2)
 
         # Create & Print Dictionary
         dict = {
@@ -77,6 +79,7 @@ while True:
         "Subscriptions":subscriptions_total,
         "N26 Saving":Saving,
         "Roth_IRA":Roth_IRA,
+        "Emergency Fund":e_fund,
         "Remainder":remainder,
         "Stocks":stocks,
         "Bonds":bonds,
