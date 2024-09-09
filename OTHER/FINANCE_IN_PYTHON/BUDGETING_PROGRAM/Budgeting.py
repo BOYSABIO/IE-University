@@ -51,6 +51,7 @@ while True:
         remainder = round(((total - (total_food + subscriptions_total + savings))), 2)
         fun = round((remainder * 0.2),2)
         allocation = remainder - fun
+        
         if investment_style == "safe":
             stocks = round((allocation * 0.25), 2)
             bonds = round((allocation * 0.40),2)

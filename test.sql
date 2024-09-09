@@ -22,3 +22,6 @@ FROM employees;
 CREATE VIEW employee_hire_years AS --Name of view
 SELECT id, name, year_hired --What we want to select for the view
 FROM employees; --The Table
+
+SELECT id, name --Once a view is created, you can query it like a normal table
+FROM employee_hire_years;
