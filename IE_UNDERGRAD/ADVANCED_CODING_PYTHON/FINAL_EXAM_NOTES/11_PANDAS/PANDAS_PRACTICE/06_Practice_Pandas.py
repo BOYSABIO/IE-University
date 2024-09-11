@@ -8,7 +8,7 @@ average of each column."""
 import pandas as pd
 
 def prices_summary(file):
-    df = pd.read_csv(file, sep = ";", decimal = ",", thousands = ".", index_col = 0) #Adapt CSV File
+    df = pd.read_csv(file, sep = ",", decimal = ",", thousands = ".", index_col = 0) #Adapt CSV File
     return pd.DataFrame([df.min(), df.max(), df.mean()], index = ["Minimum", "Maximum", "Mean"])
 
 
