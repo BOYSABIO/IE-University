@@ -181,6 +181,33 @@ while True:
 
     elif program == 3:
         print("Rebalancing Program...")
+        amount = int(input("Enter the amount to be rebalanced: "))
+        investment_style = input("Choose (safe) or (risky) investment style: ")
+
+        if investment_style == "safe":
+            stocks = round((amount * 0.25), 2)
+            bonds = round((amount * 0.40),2)
+            realestate = round((amount * 0.1),2)
+            commodities = round((amount * 0.1),2)
+            money_fund = round((amount * 0.15))
+        else:
+            stocks = round((amount * 0.4), 2)
+            bonds = round((amount * 0.3), 2)
+            realestate = round((amount * 0.1),2)
+            commodities = round((amount * 0.15), 2)
+            money_fund = round((amount * 0.05),2)
+
+        rebalance = {
+            "Stocks":stocks,
+            "Bonds":bonds,
+            "REITs":realestate,
+            "Commodities":commodities,
+            "Money Market":money_fund
+        }
+
+        print(rebalance)
+        s = pd.Series(rebalance)
+        print(s)
 
     elif program == 4:
         print("Ending Program...")
