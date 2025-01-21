@@ -2,6 +2,7 @@
 # if imported print the current date and time and "Imported from {filename}"
 
 import datetime
+import os
 
 # from ex1 import print_current_date_and_time, print_name
 
