@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 For practice
+=======
+This is a file for practice
+>>>>>>> d5232b1629f94ef47e16aab41f4270c08e26817b
