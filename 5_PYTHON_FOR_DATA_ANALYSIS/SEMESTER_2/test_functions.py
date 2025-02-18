@@ -6,7 +6,7 @@ def test_get_financial_data_returns_df():
 
     stock_ticker = 'GOOG'
     start_date = '2025-01-01'
-    end_date = '2025-01-02'
+    end_date = '2025-01-31'
     column_to_extract = 'Close'
 
     df = functions.get_financial_data(
