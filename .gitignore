@@ -1,3 +1,6 @@
 # Ignore all .env files
 *.env
 *.csv
+.venv/
+__pycache__/
+*.pyc
