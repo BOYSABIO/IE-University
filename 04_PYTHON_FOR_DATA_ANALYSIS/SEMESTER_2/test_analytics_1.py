@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-from analytics_1 import stats_report, divide, factorial, add
+from analytics_1 import stats_report, divide, factorial
 
 def test_stats_report_with_positive_numbers():
     data = [1, 2, 3, 4, 5]

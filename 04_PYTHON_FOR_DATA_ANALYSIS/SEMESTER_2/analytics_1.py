@@ -31,4 +31,3 @@ if __name__ == '__main__':
     print(stats_report(data))
     print(divide(data[0], data[1]))
     print(factorial(5))
-    print(add(1, 2))
