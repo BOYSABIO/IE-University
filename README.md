@@ -1,5 +1,10 @@
 # IE MASTERS IN BUSINESS ANALYTICS & DATA SCIENCE
 
+## APIs
+[SimFin](https://www.simfin.com/en/financial-analytics/): Stock screener and backtesting  
+[FinnHub](https://finnhub.io/): Real-Time RESTful APIs and Websocket for Stocks, Currencies, and Crypto
+
+
 ## Synthetic Data
 [Medium](https://moez-62905.medium.com/synthetic-data-is-the-future-of-artificial-intelligence-6fcfd2ce1a14)  
 [HuggingFace](https://huggingface.co/blog/synthetic-data-generator)  
