@@ -12,3 +12,16 @@
 [Nvidia](https://www.nvidia.com/en-us/glossary/synthetic-data-generation/)  
 [IBM](https://www.ibm.com/think/insights/synthetic-data-generation)  
 [DataCamp](https://www.datacamp.com/tutorial/synthetic-data-generation)
+[Faker](https://fakerapi.it/)
+
+<div class="terminal-loader">
+  <div class="terminal-header">
+    <div class="terminal-title">Status</div>
+    <div class="terminal-controls">
+      <div class="control close"></div>
+      <div class="control minimize"></div>
+      <div class="control maximize"></div>
+    </div>
+  </div>
+  <div class="text">Loading...</div>
+</div>
