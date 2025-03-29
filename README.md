@@ -2,7 +2,7 @@
 
 ## APIs
 [SimFin](https://www.simfin.com/en/financial-analytics/): Stock screener and backtesting  
-[FinnHub](https://finnhub.io/): Real-Time RESTful APIs and Websocket for Stocks, Currencies, and Crypto
+[FinnHub](https://finnhub.io/): Real-Time RESTful APIs and Websocket for Stocks, Currencies, and Crypto  
 [NASA](https://api.nasa.gov/): NASAs open APIs
 
 
