@@ -13,3 +13,7 @@
 [IBM](https://www.ibm.com/think/insights/synthetic-data-generation)  
 [DataCamp](https://www.datacamp.com/tutorial/synthetic-data-generation)  
 [Faker](https://fakerapi.it/)  
+
+
+## Visualization
+[Streamlit](https://docs.streamlit.io/get-started)
