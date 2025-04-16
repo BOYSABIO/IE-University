@@ -17,3 +17,10 @@
 
 ## Visualization
 [Streamlit](https://docs.streamlit.io/get-started)
+
+
+## Big Data
+[DataBricks](https://community.cloud.databricks.com/login.html?next_url=%2Feditor%2Fnotebooks%2F1525544541118642%3Fo%3D307326948664440&tuuid=113a9e9e-e4c2-47af-aaeb-e587363df54f#command/1365989324005175)
+[ApacheSpark](https://spark.apache.org/)
+[ApacheNifi](https://nifi.apache.org/)
+[Hadoop](https://hadoop.apache.org/)
