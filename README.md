@@ -1,5 +1,8 @@
 # IE MASTERS IN BUSINESS ANALYTICS & DATA SCIENCE
 
+## Reinforcement Learning
+[Gymnasium](https://gymnasium.farama.org/)
+
 ## APIs
 [SimFin](https://www.simfin.com/en/financial-analytics/): Stock screener and backtesting  
 [FinnHub](https://finnhub.io/): Real-Time RESTful APIs and Websocket for Stocks, Currencies, and Crypto  
