@@ -6,4 +6,5 @@ __pycache__/
 *.pyc
 .vscode/
 myenv312/
+python39/
 .pytest_cache
