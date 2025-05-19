@@ -8,3 +8,6 @@ __pycache__/
 myenv312/
 python39/
 .pytest_cache
+
+# Large Models
+13_COMPUTER_VISION/exercises/RPC-TF.keras
