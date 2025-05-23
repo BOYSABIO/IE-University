@@ -1,5 +1,9 @@
 # IE MASTERS IN BUSINESS ANALYTICS & DATA SCIENCE
 
+## Machine Learning & Deep Learning
+[Keras](https://keras.io/api/)
+[Pytorch](https://docs.pytorch.org/docs/stable/index.html)
+
 ## Reinforcement Learning
 [Gymnasium](https://gymnasium.farama.org/)
 
@@ -27,3 +31,6 @@
 [ApacheSpark](https://spark.apache.org/)
 [ApacheNifi](https://nifi.apache.org/)
 [Hadoop](https://hadoop.apache.org/)
+
+## MLOps
+[CookieCutter](https://cookiecutter-data-science.drivendata.org/#with-pip)
