@@ -33,4 +33,6 @@
 [Hadoop](https://hadoop.apache.org/)
 
 ## MLOps
-[CookieCutter](https://cookiecutter-data-science.drivendata.org/#with-pip)
+[CookieCutter](https://cookiecutter-data-science.drivendata.org/#with-pip): Starting REPO structure  
+[Pylint](https://www.pylint.org/): Code cleanliness  
+[Flake8](https://flake8.pycqa.org/en/latest/): Code cleanliness  
