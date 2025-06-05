@@ -1,0 +1,16 @@
+<>:41: SyntaxWarning: invalid escape sequence '\g'
+<>:41: SyntaxWarning: invalid escape sequence '\g'
+C:\Users\SABIO\AppData\Local\Temp\ipykernel_28560\2180171854.py:41: SyntaxWarning: invalid escape sequence '\g'
+  """
+C:\Users\SABIO\AppData\Local\Temp\ipykernel_28560\2180171854.py:41: SyntaxWarning: invalid escape sequence '\g'
+  """
+<>:43: SyntaxWarning: invalid escape sequence '\g'
+<>:43: SyntaxWarning: invalid escape sequence '\g'
+C:\Users\SABIO\AppData\Local\Temp\ipykernel_28560\3151574320.py:43: SyntaxWarning: invalid escape sequence '\g'
+  """
+<>:43: SyntaxWarning: invalid escape sequence '\g'
+<>:43: SyntaxWarning: invalid escape sequence '\g'
+C:\Users\SABIO\AppData\Local\Temp\ipykernel_28560\3151574320.py:43: SyntaxWarning: invalid escape sequence '\g'
+  """
+C:\Users\SABIO\AppData\Local\Temp\ipykernel_28560\3151574320.py:43: SyntaxWarning: invalid escape sequence '\g'
+  """
