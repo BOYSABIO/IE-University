@@ -8,6 +8,7 @@ __pycache__/
 myenv312/
 python39/
 .pytest_cache
+tensorflow_gpu_env/
 
 # Large Models
 13_COMPUTER_VISION/exercises/RPC-TF.keras
