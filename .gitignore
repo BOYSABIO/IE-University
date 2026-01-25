@@ -12,3 +12,6 @@ tensorflow_gpu_env/
 
 # Large Models
 13_COMPUTER_VISION/exercises/RPC-TF.keras
+
+# Backup Files
+requirements312.txt.bak 
